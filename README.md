@@ -1,1 +1,1 @@
-# slides-intro-cprogramming
+# Intro to Competitive Programming
