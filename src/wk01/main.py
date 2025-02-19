@@ -13,6 +13,18 @@ class Intro(Slide):
         self.play(FadeIn(ft))
         self.next_slide()
         self.play(FadeOut(ft))
+        pres = Title("Presentación")
+        yo = Paragraph(
+            "• Yo: Sebastian (obvio todos me dicen Sebas)",
+            "• Finalista Regional ICPC Mexico 2024",
+            "• Vicepresidente de CAP",
+            "• Co-organizador de Code Rush 2025",
+            "• Algunas internships (y voy a explicar pq)"
+        )
+        yo.scale(0.7)
+        self.play(FadeIn(Group(pres, yo)))
+        self.next_slide()
+        self.play(FadeOut(Group(pres, yo)))
         prog_comp = Text("Programación Competitiva")
         icpc = SVGMobject("img/wk01/ICPC_Foundation_logo.svg")
         prog_comp.move_to(2.5 * UP)
@@ -51,7 +63,7 @@ class Intro(Slide):
         self.play(FadeIn(htbcomp))
         self.next_slide()
         t1 = Paragraph(
-            "• Tip 1: Identificar (y conocer) tipos de problemas",
+            "• Tip: Identificar (y conocer) tipos de problemas",
             "\t- Ad Hoc",
             "\t- Fuerza bruta",
             "\t- Programación dinámica",
@@ -69,3 +81,41 @@ class Intro(Slide):
         )
         t2.scale(0.7)
         self.play(FadeIn(t2))
+        self.next_slide()
+        self.play(FadeOut(t2))
+        t3 = Paragraph(
+            "• Tip: Trabajo en equipo!",
+            "\t- Practicar programar en una hoja de papel (en serio)",
+            "\t- Practicar generar casos de prueba",
+        )
+        t3.scale(0.7)
+        self.play(FadeIn(t3))
+        self.next_slide()
+        self.play(FadeOut(Group(htbcomp, t3)))
+        pract_title = Title("Práctica, práctica, práctica")
+        self.play(FadeIn(pract_title))
+        t4 = Paragraph(
+            "• Jueces en línea: lugares para practicar ejercicios",
+            "\t- Codeforces (https://codeforces.com/)",
+            "\t- AtCoder (https://atcoder.jp/)",
+            "\t- Kattis (https://www.kattis.com/)"
+        )
+        t4.scale(0.7)
+        self.play(FadeIn(t4))
+        self.next_slide()
+        self.play(FadeOut(Group(pract_title, t4)))
+        status_title = Title("El arte de probar código")
+        t5 = Paragraph(
+            "• Al final del día solo queremos un AC :)",
+            "• Aun así, puede que recibamos: :(",
+            "\t-Error de presentación (PE)",
+            "\t-Respuesta incorrecta (WA)",
+            "\t-Tiempo límite excedido (TLE)",
+            "\t-Memoria límite excedida (MLE)",
+            "\t-Error de ejecución (RTE)"
+        )
+        t5.scale(0.7)
+        self.play(FadeIn(Group(t5, status_title)))
+        self.next_slide()
+        self.play(FadeOut(Group(t5, status_title)))
+        self.play(FadeIn(Group(Paragraph("¡Comenzemos esta aventura juntos!", "Muchas gracias :)"))))

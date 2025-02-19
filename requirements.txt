@@ -1,2 +1,1 @@
-manim
-manim-slides[pyside6-full]
+manim-slides[pyqt6-full,manim]
