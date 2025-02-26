@@ -19,7 +19,7 @@ class Intro(Slide):
             "• Finalista Regional ICPC Mexico 2024",
             "• Vicepresidente de CAP",
             "• Co-organizador de Code Rush 2025",
-            "• Algunas internships (y voy a explicar pq)"
+            "• Algunas internships (y voy a explicar pq)",
         )
         yo.scale(0.7)
         self.play(FadeIn(Group(pres, yo)))
@@ -98,7 +98,7 @@ class Intro(Slide):
             "• Jueces en línea: lugares para practicar ejercicios",
             "\t- Codeforces (https://codeforces.com/)",
             "\t- AtCoder (https://atcoder.jp/)",
-            "\t- Kattis (https://www.kattis.com/)"
+            "\t- Kattis (https://www.kattis.com/)",
         )
         t4.scale(0.7)
         self.play(FadeIn(t4))
@@ -112,10 +112,16 @@ class Intro(Slide):
             "\t-Respuesta incorrecta (WA)",
             "\t-Tiempo límite excedido (TLE)",
             "\t-Memoria límite excedida (MLE)",
-            "\t-Error de ejecución (RTE)"
+            "\t-Error de ejecución (RTE)",
         )
         t5.scale(0.7)
         self.play(FadeIn(Group(t5, status_title)))
         self.next_slide()
         self.play(FadeOut(Group(t5, status_title)))
-        self.play(FadeIn(Group(Paragraph("¡Comenzemos esta aventura juntos!", "Muchas gracias :)"))))
+        self.play(
+            FadeIn(
+                Group(
+                    Paragraph("¡Comenzemos esta aventura juntos!", "Muchas gracias :)")
+                )
+            )
+        )
